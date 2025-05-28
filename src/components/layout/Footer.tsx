@@ -52,7 +52,39 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
-                    
+          
+          {/* Categories */}
+          <div>
+            <h3 className="text-lg font-bold text-white mb-4">Categories</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/products?category=Electronics" className="text-secondary-200 hover:text-white transition-colors">
+                  Electronics
+                </Link>
+              </li>
+              <li>
+                <Link to="/products?category=Sports" className="text-secondary-200 hover:text-white transition-colors">
+                  Sports
+                </Link>
+              </li>
+              <li>
+                <Link to="/products?category=Outdoors" className="text-secondary-200 hover:text-white transition-colors">
+                  Outdoors
+                </Link>
+              </li>
+              <li>
+                <Link to="/products?category=Music" className="text-secondary-200 hover:text-white transition-colors">
+                  Music
+                </Link>
+              </li>
+              <li>
+                <Link to="/products?category=Tools" className="text-secondary-200 hover:text-white transition-colors">
+                  Tools
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
           {/* Contact Info */}
           <div>
             <h3 className="text-lg font-bold text-white mb-4">Contact Us</h3>

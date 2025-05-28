@@ -1,5 +1,6 @@
-import React, { createContext, useState, useContext, ReactNode } from 'react';
+import React, { createContext, useState, useContext, ReactNode, useEffect } from 'react';
 import { User, AuthContextType } from '../types';
+import { supabase } from '../lib/supabase';
 
 const defaultAuthContext: AuthContextType = {
   user: null,
@@ -18,61 +19,72 @@ interface AuthProviderProps {
 }
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
-  const [user, setUser] = useState<User | null>(() => {
-    const savedUser = localStorage.getItem('user');
-    return savedUser ? JSON.parse(savedUser) : null;
-  });
-
+  const [user, setUser] = useState<User | null>(null);
   const isAuthenticated = !!user;
 
-  // Mock login functionality
+  useEffect(() => {
+    // Check active sessions and sets the user
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session?.user) {
+        setUser({
+          id: session.user.id,
+          email: session.user.email!,
+          name: session.user.user_metadata.name || session.user.email!.split('@')[0],
+          isAuthenticated: true,
+        });
+      }
+    });
+
+    // Listen for changes on auth state
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (session?.user) {
+        setUser({
+          id: session.user.id,
+          email: session.user.email!,
+          name: session.user.user_metadata.name || session.user.email!.split('@')[0],
+          isAuthenticated: true,
+        });
+      } else {
+        setUser(null);
+      }
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
   const login = async (email: string, password: string) => {
-    // In a real app, this would make an API call to your backend
-    return new Promise<void>((resolve, reject) => {
-      setTimeout(() => {
-        // Simulating successful login
-        if (email && password) {
-          const userData: User = {
-            id: '1',
-            email,
-            name: email.split('@')[0],
-            isAuthenticated: true,
-          };
-          setUser(userData);
-          localStorage.setItem('user', JSON.stringify(userData));
-          resolve();
-        } else {
-          reject(new Error('Invalid credentials'));
-        }
-      }, 1000);
+    const { error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
     });
+
+    if (error) {
+      throw error;
+    }
   };
 
-  // Mock register functionality
   const register = async (email: string, password: string, name: string) => {
-    // In a real app, this would make an API call to your backend
-    return new Promise<void>((resolve, reject) => {
-      setTimeout(() => {
-        if (email && password && name) {
-          const userData: User = {
-            id: '1',
-            email,
-            name,
-            isAuthenticated: true,
-          };
-          setUser(userData);
-          localStorage.setItem('user', JSON.stringify(userData));
-          resolve();
-        } else {
-          reject(new Error('Invalid registration data'));
-        }
-      }, 1000);
+    const { error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        data: {
+          name,
+        },
+      },
     });
+
+    if (error) {
+      throw error;
+    }
   };
 
-  const logout = () => {
+  const logout = async () => {
+    const { error } = await supabase.auth.signOut();
+    if (error) {
+      console.error('Error logging out:', error.message);
+    }
     setUser(null);
-    localStorage.removeItem('user');
   };
 
   const value = {
