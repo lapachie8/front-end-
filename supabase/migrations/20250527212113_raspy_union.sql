@@ -197,6 +197,6 @@ CREATE POLICY "System can manage email queue"
 
 -- Insert default email templates
 INSERT INTO email_templates (name, subject, content) VALUES
-  ('order_confirmation', 'Order Confirmation - RentEase', 'Thank you for your order! Your order #{{order_id}} has been confirmed.'),
-  ('order_status_update', 'Order Status Update - RentEase', 'Your order #{{order_id}} status has been updated to {{status}}.'),
-  ('admin_login_code', 'Your Login Code - RentEase Admin', 'Your 2FA code is: {{code}}');
+  ('order_confirmation', 'Order Confirmation - Juiweaprent', 'Thank you for your order! Your order #{{order_id}} has been confirmed.'),
+  ('order_status_update', 'Order Status Update - Juiweaprent', 'Your order #{{order_id}} status has been updated to {{status}}.'),
+  ('admin_login_code', 'Your Login Code - Juiweaprent Admin', 'Your 2FA code is: {{code}}');

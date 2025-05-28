@@ -17,16 +17,16 @@ const HomePage: React.FC = () => {
           <div className="flex flex-col lg:flex-row items-center">
             <div className="lg:w-1/2 lg:pr-12 mb-8 lg:mb-0">
               <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight text-white">
-                Rent Premium Equipment for Any Occasion
+                Sewa Equipment Berkualitas, Untuk Kebutuhan Cosplaymu
               </h1>
               <p className="text-lg mb-8 text-primary-100">
-                Quality products, flexible rental periods, and exceptional service. Experience the convenience of renting instead of buying.
+                Produk berkualitas, periode sewa fleksibel, dan layanan yang luar biasa. Rasakan kenyamanan menyewa daripada membeli.
               </p>
               
               <div className="relative mt-8">
                 <input
                   type="text"
-                  placeholder="What would you like to rent?"
+                  placeholder="mau sewa apa hari ini?"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full px-4 py-3 pr-12 rounded-md text-secondary-800 focus:outline-none focus:ring-2 focus:ring-accent-500"
@@ -41,7 +41,7 @@ const HomePage: React.FC = () => {
               
               <div className="mt-6">
                 <Link to="/products" className="btn-accent">
-                  Browse All Products
+                  Cari Produk
                 </Link>
               </div>
             </div>
@@ -51,15 +51,15 @@ const HomePage: React.FC = () => {
                 <div className="space-y-4">
                   <div className="rounded-lg overflow-hidden shadow-lg transform translate-y-4">
                     <img 
-                      src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg" 
-                      alt="Mountain Bike" 
+                      src="./public/img/ayang.png" 
+                      alt="Feixiao" 
                       className="w-full h-48 object-cover"
                     />
                   </div>
                   <div className="rounded-lg overflow-hidden shadow-lg">
                     <img 
-                      src="https://images.pexels.com/photos/1751550/pexels-photo-1751550.jpeg" 
-                      alt="Paddleboard" 
+                      src="" 
+                      alt="Anime" 
                       className="w-full h-48 object-cover"
                     />
                   </div>
@@ -67,15 +67,15 @@ const HomePage: React.FC = () => {
                 <div className="space-y-4">
                   <div className="rounded-lg overflow-hidden shadow-lg">
                     <img 
-                      src="https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg" 
-                      alt="Camera" 
+                      src="" 
+                      alt="Anime" 
                       className="w-full h-48 object-cover"
                     />
                   </div>
                   <div className="rounded-lg overflow-hidden shadow-lg transform translate-y-4">
                     <img 
-                      src="https://images.pexels.com/photos/3784221/pexels-photo-3784221.jpeg" 
-                      alt="DJ Equipment" 
+                      src="" 
+                      alt="anime" 
                       className="w-full h-48 object-cover"
                     />
                   </div>
@@ -112,7 +112,7 @@ const HomePage: React.FC = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl font-bold">Featured Products</h2>
+            <h2 className="text-3xl font-bold">Ada apa aja?</h2>
             <Link to="/products" className="flex items-center text-primary-600 hover:text-primary-700 font-medium">
               View all <ArrowRight className="w-4 h-4 ml-1" />
             </Link>
@@ -122,10 +122,10 @@ const HomePage: React.FC = () => {
         </div>
       </section>
       
-      {/* Why choose us section */}
+      {/* Why choose us section
       <section className="py-16 bg-secondary-900 text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center text-white">Why Choose RentEase</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-white">Why Choose Juiweaprent</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center p-6">
@@ -177,9 +177,9 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       
-      {/* CTA Section */}
+      {/* CTA Section
       <section className="py-16 bg-primary-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Ready to rent your next item?</h2>
@@ -190,7 +190,7 @@ const HomePage: React.FC = () => {
             Start Browsing
           </Link>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

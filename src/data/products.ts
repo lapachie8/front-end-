@@ -3,92 +3,170 @@ import { Product } from '../types';
 export const products: Product[] = [
   {
     id: 1,
-    name: 'Professional DSLR Camera',
-    description: 'High-end DSLR camera with 24MP sensor, perfect for professional photography and videography. Includes multiple lenses and accessories.',
+    name: 'abc',
+    description: 'aksesoris lengkap untuk bermain Honkai Star-Rail, termasuk controller, headset, dan mouse pad khusus.',
     price: 75,
     priceUnit: 'day',
-    category: 'Electronics',
+    category: 'Honkai Star-Rail',
     imageUrl: 'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     available: true
   },
   {
     id: 2,
-    name: 'Mountain Bike',
-    description: 'Premium mountain bike with front suspension, disc brakes, and 21 speeds. Perfect for trail riding and outdoor adventures.',
+    name: 'apa',
+    description: 'asd',
     price: 35,
     priceUnit: 'day',
-    category: 'Sports',
+    category: 'Honkai Star-Rail',
     imageUrl: 'https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     available: true
   },
   {
     id: 3,
-    name: 'Projector',
-    description: 'Full HD projector with 3000 lumens brightness, perfect for home cinema experiences or business presentations.',
+    name: 'ksjd',
+    description: 'asdd',
     price: 40,
     priceUnit: 'day',
-    category: 'Electronics',
+    category: 'Honkai Star-Rail',
     imageUrl: 'https://images.pexels.com/photos/1117132/pexels-photo-1117132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     available: true
   },
   {
     id: 4,
-    name: 'Camping Tent (4-Person)',
-    description: 'Spacious 4-person tent with waterproof material, easy setup, and ventilation windows. Includes carrying bag.',
+    name: 'dsdzxc',
+    description: 'xzcw',
     price: 25,
     priceUnit: 'day',
-    category: 'Outdoors',
+    category: 'Honkai Star-Rail',
     imageUrl: 'https://images.pexels.com/photos/2582818/pexels-photo-2582818.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     available: true
   },
   {
     id: 5,
-    name: 'Acoustic Guitar',
-    description: 'Professional acoustic guitar with solid wood construction and premium strings for beautiful sound quality.',
+    name: 'asds',
+    description: 'xvv',
     price: 30,
     priceUnit: 'day',
-    category: 'Music',
+    category: 'Honkai Star-Rail',
     imageUrl: 'https://images.pexels.com/photos/1407322/pexels-photo-1407322.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     available: true
   },
   {
     id: 6,
-    name: 'Power Drill Kit',
-    description: 'Complete power drill kit with multiple bits and attachments. Perfect for home improvement and DIY projects.',
+    name: 'xcqqw',
+    description: 'sdadd',
     price: 20,
     priceUnit: 'day',
-    category: 'Tools',
+    category: 'Honkai Star-Rail',
     imageUrl: 'https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     available: true
   },
   {
     id: 7,
-    name: 'Paddleboard',
-    description: 'Inflatable paddleboard with pump, paddle, and carrying bag. Great for lakes, rivers, and calm ocean waters.',
+    name: 'safg',
+    description: 'qffqf',
     price: 45,
     priceUnit: 'day',
-    category: 'Water Sports',
+    category: 'Honkai Star-Rail Sports',
     imageUrl: 'https://images.pexels.com/photos/1751550/pexels-photo-1751550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     available: true
   },
   {
     id: 8,
-    name: 'DJ Equipment Set',
-    description: 'Complete DJ setup including controller, speakers, and headphones. Perfect for parties and events.',
+    name: 'saff',
+    description: 'asdd',
     price: 120,
     priceUnit: 'day',
-    category: 'Music',
+    category: 'Honkai Star-Rail',
     imageUrl: 'https://images.pexels.com/photos/3784221/pexels-photo-3784221.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     available: true
+  },
+  {
+    id: 9,
+    name: 'asdasdsa',
+    description: 'saff',
+    price: 75,
+    priceUnit: 'day',
+    category: 'Anime',
+    imageUrl: 'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    available: true
+  },
+  {
+    id: 10,
+    name: 'asfasfs',
+    description: 'asfqqf',
+    price: 35,
+    priceUnit: 'day',
+    category: 'Anime',
+    imageUrl: 'https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    available: true
+  },
+  {
+    id: 11,
+    name: 'asqweq',
+    description: 'vvqweqe',
+    price: 40,
+    priceUnit: 'day',
+    category: 'Anime',
+    imageUrl: 'https://images.pexels.com/photos/1117132/pexels-photo-1117132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    available: true
+  },
+  {
+    id: 12,
+    name: 'xcvwqeq',
+    description: 'asfqwfwqwq',
+    price: 25,
+    priceUnit: 'day',
+    category: 'Anime',
+    imageUrl: 'https://images.pexels.com/photos/2582818/pexels-photo-2582818.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    available: true
+  },
+  {
+    id: 13,
+    name: 'asdadasd',
+    description: 'xzveqqw',
+    price: 30,
+    priceUnit: 'day',
+    category: 'Anime',
+    imageUrl: 'https://images.pexels.com/photos/1407322/pexels-photo-1407322.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    available: true
+  },
+  {
+    id: 14,
+    name: 'asdaxv',
+    description: 'asfqweq',
+    price: 20,
+    priceUnit: 'day',
+    category: 'Anime',
+    imageUrl: 'https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    available: true
+  },
+  {
+    id: 15,
+    name: 'safq',
+    description: 'xvqqw',
+    price: 45,
+    priceUnit: 'day',
+    category: 'Anime',
+    imageUrl: 'https://images.pexels.com/photos/1751550/pexels-photo-1751550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    available: true
+  },
+  {
+    id: 16,
+    name: 'asdq',
+    description: 'asdada',
+    price: 120,
+    priceUnit: 'day',
+    category: 'Anime',
+    imageUrl: 'https://images.pexels.com/photos/3784221/pexels-photo-3784221.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    available: false
   }
 ];
 
 export const categories = [
   'All',
-  'Electronics',
-  'Sports',
-  'Outdoors',
-  'Music',
-  'Tools',
-  'Water Sports'
+  'Honkai Star-Rail',
+  'Anime',
+  'Honkai Impact 3rd',
+  'Genshin Impact'
 ];

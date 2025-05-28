@@ -35,7 +35,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-2xl font-bold text-primary-600">
-            RentEase
+            Juiweaprent
           </Link>
           
           {/* Desktop Navigation */}
