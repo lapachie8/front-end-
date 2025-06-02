@@ -32,7 +32,7 @@ import AdminSettingsPage from './pages/admin/SettingsPage';
 // Route Guards
 const PrivateRoute: React.FC<{ element: React.ReactElement }> = ({ element }) => {
   const isAuthenticated = !!localStorage.getItem('user');
-  return isAuthenticated ? element : <Navigate to="/login" state={{ from: window.location.pathname }} />;
+  return isAuthenticated ? element : <Navigate to="/login\" state={{ from: window.location.pathname }} />;
 };
 
 const AdminRoute: React.FC<{ element: React.ReactElement }> = ({ element }) => {
